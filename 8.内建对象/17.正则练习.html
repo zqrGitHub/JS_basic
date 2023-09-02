@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // asdsadas15058497125asdsad15906569099asdsafhjgas
+    let str = "asdsadas15058497125asdsad15906569099asdsafhjgas";
+    let reg = /1[3-9]\d{9}/g;
+    reg = /(1[3-9]\d)\d{4}(\d{4})/g;
+    let res;
+    while(res = reg.exec(str)){
+      // console.log(res[0],res[1],res[2]);
+      console.log(res[1]+"****"+res[2]);
+    }
+  </script>
+</body>
+</html>

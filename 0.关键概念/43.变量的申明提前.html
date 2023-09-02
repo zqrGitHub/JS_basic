@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 变量声明的提前：
+    //  -使用var关键字声明的变量，会在所有代码执行前被声明
+    //  -不使用var，则变量不会提前
+    // 函数声明的提前：
+    //  -函数声明创建整体都会提前，函数表达式不会
+    console.log(a);
+    var a = 123;
+    console.log(a);
+    a = 123;
+
+    fn1();
+    // f2();  报错因为无法调用 undefine()，相当于变量声明提前 var fn2，此时fn2是underfine,加括号报错
+    function fn1(){
+      console.log('1');
+    }
+    var fn2 = function(){
+      console.log('2');
+    }
+    //  let声明的变量实际上也会提升，但是在赋值之前解释器禁止访问该变量
+    console.log(c);
+    let c = 10;
+    console.log(c);
+  </script>
+</body>
+</html>

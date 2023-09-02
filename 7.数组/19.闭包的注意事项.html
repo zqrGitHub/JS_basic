@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function outer(){
+      let someVar = 'aaaaa';
+
+      return function(){
+        console.log(someVar);
+      }
+    }
+    /*
+      闭包的声明周期:
+        1.闭包在外部函数调用的时候产生，外部函数每次调用都会产生一个全新的闭包
+        2.在内部函数丢失的时候销毁(内部函数被垃圾回收),闭包才会消失
+
+      注意事项：
+        闭包主要隐藏一些不希望被外部访问的内容
+            意味着闭包需要占用一定内存空间
+        创建实例少用闭包，实例多用类
+    */
+
+    function outer1(){
+      let num = 0;
+      return ()=>{
+        num++;
+        console.log(num);
+      }
+    }
+    let res = outer1();  //独立闭包
+    let res2 = outer1();
+    res();
+    res2();
+
+    res = null;
+    res2 = null;
+  </script>
+</body>
+</html>

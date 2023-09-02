@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 函数作用域
+    /*
+      -调用函数时创建函数作用域，函数执行完毕，函数作用域销毁
+      -每调用一次函数都会创建一个新的函数作用域，他们之间相互独立
+      -在函数作用域中可以访问到全局作用域的变量
+      -全局作用域中，无法访问到函数作用域变量
+      -当在函数作用域中操作一个变量时，先在自身作用域中寻找，没有向上一级作用域中寻找,如果最后找到全局作用域也没有就报错
+      -函数作用域想直接访问全局的变量，window.变量
+
+    */
+    var a = 10;
+    function fn(){
+      var a = '函数fn中的a'
+      var b = 20;
+      // console.log(a);
+      function fn2(){
+        console.log(window.a);
+      }
+      fn2();
+    }
+    fn();
+    // console.log(b);
+
+    // 函数作用域中也有声明提前现象 var 声明的变量才有
+    // 函数声明也会在函数作用域中提前
+    function fn3(){
+      console.log(a);
+      var a = 12;
+    }
+    fn3();
+    // 在函数中，不使用var声明的变量，就是全局变量
+    var d = 10;
+    function fn4(){
+      // 不使用关键字，window.d
+      d = 100
+    }
+    fn4();
+    console.log(d);
+
+    // 定义形参就相当于，在函数作用域中定义了变量
+    function f5(e){
+      // var e;   相当于定义了变量  
+      console.log(e);
+    }
+    f5();
+  </script>
+</body>
+</html>

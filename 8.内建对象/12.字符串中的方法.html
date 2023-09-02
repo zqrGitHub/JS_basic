@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      字符串本质就是一个数组：
+        "hello" -》['h','e','l','l','o']
+      -属性：
+        length 获取字符串长度
+        字符串[索引] 获取指定位置的字符
+
+      -方法：
+        str.at()
+          -根据索引获取字符，可以接受负索引
+        str.charAt()
+          -根据索引获取字符
+        str.concat()
+          -用来连接两个或多个字符串
+        str.includes()
+          -用来检查字符串中是否包含某个内容
+          -有返回true，没有false
+        str.indexOf()
+        str.lastIndexOf()
+          -查询字符串中是否包含某个字符串
+        str.startsWith()
+          -检查字符串是否以指定内容开头
+        str.endsWith()
+          -检查一个字符串是否以指定内容结尾
+        str.padStart()
+        str.padEnd()
+          -通过添加指定的内容，使某个字符串保持某个长度
+        str.replace()
+          -使用一个新的字符串，替换一个指定内容
+        str.repalceAll()
+          -使用一个新的字符串，替换所有指定内容
+        str.slice()
+          -对字符串进行切片
+        str.substring()
+          -同理slice
+        str.split()
+          -用来将一个字符串拆分为一个数组
+        str.toLowrCase()
+          -将字符串转为小写
+        str.toUpperCase()
+          -将字符串转为大写
+        str.trim()
+          -去除前后空格
+        str.trimStart()
+          -去除开始空格
+        str.trimEnd()
+          -去除结束空格  
+    */
+   let str = "hello";
+  //  console.log(str[0]);
+  console.log(str.includes('z'));
+  str = "100";
+  console.log(str.padStart(7,0));
+  str = "hello hello aaaa";
+  let result = str.replaceAll("hello","zz");
+  console.log(result);
+  str = 'abc@asDAs';
+  console.log(str.split("")); //根据@符号去拆分
+  console.log(str.toLocaleLowerCase());
+  console.log(str.toLocaleUpperCase());
+  </script> 
+</body>
+</html>

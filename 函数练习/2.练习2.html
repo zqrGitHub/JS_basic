@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 定义一个函数，根据半径，计算圆的面积
+    function area(r){
+      return Math.PI*r*r; 
+    }
+    console.log(area(3));
+    // 创建一个函数可以输出人的信息,name,gender,age
+    // 实参可以是对象，也可以是函数
+    var people = {
+      name:"孙悟空",
+      age:18,
+      gender:'男',
+      address:'花果山'
+    }
+    function sayHello(a){
+      console.log(a.name);
+      console.log(a.age);
+      console.log(a.gender);
+      console.log(a.address);
+    }
+    // sayHello(people);
+    function fun(a){
+      a(people);
+    }
+    fun(sayHello);
+    fun(function(){alert('123')})
+    // sayHello() 和 sayHello 区别
+    // 调用函数，相当于函数的返回值
+    // 函数对象，相当于直接使用函数对象
+    
+  </script>
+</body>
+</html>

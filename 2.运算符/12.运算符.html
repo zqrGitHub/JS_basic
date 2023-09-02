@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // 运算符也叫操作符,可以对1个或者多个进行运算，并获取运算结果
+    //  typeof 也是运算符,他的返回值是字符串
+    /*
+      算数运算符：+ - * / %  除了+字符串比较特殊，其他碰到Number类型之外的类型都是先隐式转换为Number再做运算
+
+      +:
+      对除了String类型的数值，非number类型进行运算，会先将转为Number再运算,任何值和NaN做运算都是NaN
+        字符串 + 任何类型 都是字符串拼接
+
+      小窍门:
+          1.隐式转换,任意类型转String可以利用:  123 + "" 
+          2.想将字符串转为Number，除了Number(),可以 -0,/1,*1
+
+      -:减法
+      *:乘法
+      /:除法
+      %:取余
+
+    */
+    var a = 123  + undefined;
+    console.log(a,typeof a);
+  </script>
+</body>
+</html>

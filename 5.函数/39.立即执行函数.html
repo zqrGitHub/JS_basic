@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 开发中尽量减少在全局作用域编写代码。
+    // 如果使用let，可以配合{}创建块作用域
+    
+    {
+      let a = 10
+    }
+    // 希望创建一个只执行一次匿名的函数
+
+    // 立即执行函数(IIFE),匿名函数自调用
+    // 可以使用IIFE来创建一个一次性的函数作用域，避免变量冲突问题,必须加;避免浏览器加错
+    (function(){
+      alert('我是一个匿名函数');
+    }());
+
+    (function(a,b){
+      console.log(a+b);
+    }(212,1651));
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Person(name,age,gender){
+      this.name = name;
+      this.age = age;
+      this.gender = gender;
+    }
+    Person.prototype.toString = function(){
+      var a = '我是:'+this.name
+      return a
+    }
+    var person = new Person('孙悟空',18,'男');
+    var person1 = new Person('猪八戒',18,'男');
+    // 当我们在页面中打印一个对象时，实际上是输出的对象的toString()方法的返回值
+    console.log(person.toString());
+    console.log(person1.toString());
+  </script>
+</body>
+</html>

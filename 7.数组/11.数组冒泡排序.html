@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      思路一：
+        -比较相邻两个元素，根据大小来决定是否交换位置
+        -冒泡排序法,最慢的排序方式,数字少凑合用，不适用于数据量大的排序
+    */
+    const arr = [9, 1, 4, 5, 6, 2, 3, 7, 8,0];
+      // 冒泡排序法: 先想一次排序的过程,arr.lenth - 1是为了不让 i + 1 索引值undefind
+        for (let i = 0; i < arr.length - 1; i++) {
+          if (arr[i] > arr[i + 1]) {
+            let temp = arr[i];
+            arr[i] = arr[i + 1];
+            arr[i + 1] = temp;
+          }
+        }
+      // 冒泡排序法: 再想需要循环多少次,外层arr.length - 1 是因为当最后排到还剩一个数的时候，其他数字都顺序对了，就不用再排列
+      // 比如倒数第二次比较:  1,0,2,3,4,5,6,7,8,9    0,1,2,3,4,5,6,7,8,9 这样就可以结束了，不用再排一次
+      for (let j = 0; j < arr.length - 1; j++) {
+        for (let i = 0; i < arr.length - 1; i++) {
+          if (arr[i] > arr[i + 1]) {
+            let temp = arr[i];
+            arr[i] = arr[i + 1];
+            arr[i + 1] = temp;
+          }
+        }
+      }
+      // 再优化内存循环次数
+      // 冒泡排序法: arr.length -1 - j减少内层循环次数,提升性能
+      // 外层循环控制高度，内层控制宽度
+      for (let j = 0; j < arr.length - 1; j++) {
+        for (let i = 0; i < arr.length - 1 - j; i++) {
+          if (arr[i] > arr[i + 1]) {
+            let temp = arr[i];
+            arr[i] = arr[i + 1];
+            arr[i + 1] = temp;
+          }
+        }
+      }
+      console.log(arr);
+    </script>
+  </body>
+</html>

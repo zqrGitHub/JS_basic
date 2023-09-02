@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      函数：
+        -函数也是一个对象
+        -函数中可以封装一些功能，在需要时执行代码
+    */
+    // 创建一个函数对象
+    // 可以将要封装的代码以字符串形式传递给构造函数
+    // var fun = new Function("console.log('这一个函数');"); 开发中基本不用
+    // 封装到函数里的代码不会立即执行
+    // 函数调用的时候执行  语法： 函数对象()
+    // 调用函数时：封装的代码会按照顺序执行
+    // fun();
+
+    /*
+      使用函数声明来创建函数
+        -语法：
+          function 函数名([形参1，形参2....]){
+            函数体
+          }
+    */
+   function fn2(){
+    console.log('你好');
+   }
+   fn2();
+
+   /*
+      函数表达式：
+        -语法：
+          var 函数名 = function([形参1，形参2,...]){
+            函数体
+          }
+   */
+    /*
+      箭头函数: 
+          ()=>{
+            语句....
+          }
+          只有一条语句大括号可以省略不写
+    */
+      var fn3 = function(){
+        console.log('111');
+      };
+      fn3();
+      const fn4 = ()=> console.log('箭头函数');
+      console.log(fn4);
+  </script>
+</body>
+</html>

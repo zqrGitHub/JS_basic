@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 创建函数创建三个数的和
+    /*
+      可以使用return 来设置函数的返回值
+        语法：
+            return 值
+
+      1.return后的语句都不执行
+      2.如果return语句后面不跟任何值相当于返回undefined,不写return，也也是返回undefined
+      3.return 后面可以跟任意类型的值
+
+    */
+    function sum(a,b,c){
+      return a+b+c;
+      // 不执行
+      alert('123');
+    }
+    var res = sum(1,2,3);
+    console.log(res);
+  </script>
+</body>
+</html>

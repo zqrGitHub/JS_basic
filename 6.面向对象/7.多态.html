@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      多态：
+        要调用某一个函数，无需指定类型，只要满足一些条件即可
+    */
+   class Person{
+    constructor(name){
+      this.name = name;
+    }
+   }
+   class Dog{
+    constructor(name){
+      this.name = name;
+    }
+   }
+   const p1 = new Person('小李');
+   const d1 = new Dog('旺财');
+   function sayHi(obj){
+    console.log('你好我是:=',obj.name);
+   }
+   sayHi(p1);
+   sayHi(d1);
+  </script>
+</body>
+</html>

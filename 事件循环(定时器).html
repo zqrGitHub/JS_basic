@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      定时器的本质，就是在指定事件后将函数添加到消息队列中
+    */
+  //  三秒进入队列，栈被占用，等栈执行完毕，才进入栈中执行
+   console.time();
+    setTimeout(()=>{
+      console.timeEnd();
+      console.log("定时器执行了~");
+    },3000)
+
+    // 使程序卡6s
+    const begin = Date.now();
+    while(Date.now() - begin < 6000){}
+
+    // setInterval()每间隔一段时间就将函数添加到消息队列中，如果函数执行的速度较慢，它是无法确保每次执行的间隔
+
+    // 希望可以确保每次执行都有相同的间隔
+    setTimeout(function fn(){
+      console.log('函数执行');
+      setTimeout(fn,3000);
+    },3000);
+  </script>
+</body>
+</html>

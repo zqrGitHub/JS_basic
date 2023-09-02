@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 强制类型转换
+    //  -将一个数据类型转换为其他的类型
+    //  主要是三个数据类型之间转换: String Number Boolean
+
+    // 1.将其他数据类型转为String
+    //      方式1:调用被转换类型的toString()方法,被转换类型a,的就是.什么什么的方法
+    //                 a.toString(),该方法不会影响原来的变量,会将转换结果返回
+    //                  null和undefine没有toString方法
+    //      方式2:调用String()函数,并将被转换的数据，作为参数传进去,结果会返回
+    //                     Number和Boolean使用String()函数，底层依然是使用toString()方法
+
+    var a = 123;
+    a = a.toString();
+    console.log(typeof a);
+    var b = false;
+    b = b.toString();
+    console.log(typeof b);
+
+    let c = null;
+    c = String(c);
+    console.log(typeof c);
+    let d = undefined;
+    d = String(d);
+    console.log(typeof d);
+  </script>
+</body>
+</html>

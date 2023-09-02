@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      函数的作用域，在函数创建的时候就已经确定(词法作用域)
+        和调用的位置无关
+
+      闭包利用的就是词法作用域
+    */
+   let a = '全局的a';
+
+   function fn(){
+    console.log(a);
+   }
+
+   function fn2(){
+    let a = '局部的a';
+    fn();
+   }
+   
+   fn2();
+
+   function fn3(){
+    let a = 'fn3中的a';
+
+    function fn4(){
+      console.log(a);
+    }
+    return fn4;
+   }
+   let res = fn3();
+   res();
+  </script>
+</body>
+</html>

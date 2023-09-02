@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      递归：
+        -调用自身的函数称为递归函数
+        -递归的作用和循环基本一致
+        -递归性能不高，尽量使用循环少用递归
+
+      编写递归2个套路
+        1.基线条件 --- 递归的终止条件
+        2.递归条件 --- 如何对问题进行拆分
+    */
+    function jiecheng(num){
+      let sum=1;
+      for(let i=1;i<=num;i++){
+        sum*=i;
+      }
+      return sum;
+    }
+    let res = jiecheng(4);
+    console.log(res);
+
+    function digui(num){
+      // 基线条件
+      if(num == 1){
+        return 1;
+      }else{
+        // 递归条件
+        return num*digui(num-1)
+      }
+    }
+    console.log(digui(3));
+  </script>
+</body>
+</html>

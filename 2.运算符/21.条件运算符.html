@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 条件运算符也叫三元运算符
+    /*
+      语法：
+          条件表达式?语句1:语句2
+        1.执行流程，条件表达式true,返回语句1.条件表达式false，返回语句2
+
+        如果条件表达式不是布尔值，会执行自动类型转换
+
+    */
+   var a = 10;
+   var b = 20;
+   var c = 30;
+   a > b ? console.log('a大'):console.log('b大');
+  //  获取a和b最大值
+  // var max = a>b?a:b;
+  // max = max>c?max:c;
+  var max = a > b ? (a>c?a:c) : (b>c?b:c) 
+  console.log(max);
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Person(name,age){
+      this.name = name;
+      this.age = age;
+      // 添加一个方法
+    }
+    Person.prototype.sayName =function(){
+        alert("hello!我是:"+this.name)
+      }
+    // 创建person实例
+    var per = new Person('孙悟空',18,);
+    var per2 = new Person('猪八戒',26,);
+    var per3 = new Person('蜘蛛精',10,);
+    var per4 = new Person('沙和尚',11,);
+    var per5 = new Person('唐僧',36,);
+    var perArr = [per,per2,per3,per4,per5];
+    // 创建一个函数，可以将满18岁的Person提取出来，然后封装到一个新的数组返回
+    function adult(arr){
+      // 创建一个新数组
+      var newArr = [];
+      // 遍历arr，获取arr中的Person对象
+      for(var i = 0;i<arr.length;i++){
+        // 判断Person对象的age是否大于等于18
+        if(arr[i].age >= 18){
+          // 如果大于18添加到新数组中
+          newArr.push(arr[i]);
+        }
+      };
+      // 返回数组
+      return newArr;
+    }
+    var res = adult(perArr);
+    console.log(res);
+  </script>
+</body>
+</html>

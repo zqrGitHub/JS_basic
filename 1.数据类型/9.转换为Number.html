@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 将其他类型转为Number
+    /*
+      方式1：使用Number()函数
+                1.纯数字'123'这种直接转换为数字
+                2.如果是加杂字母"123abc"转为NaN,如果是""空字符串，或者里面都是空格，则会转换为0但是类型已经变成number类型
+                3.布尔转数字  true > 1  false > 0
+                4.Null转数字   Null > 0
+                5.undefine转数字  undefine > NaN 
+
+
+      方式2：
+          -专门用于对付字符串   2个函数
+          -parseInt() 把一个字符串转为整数
+          -parseFloat() 把一个字符串转为浮点数
+
+          如果对非字符串使用，会被先转为String，然后再操作
+    */
+    var a = "px120";
+    a = parseInt(a);
+    console.log(a);
+    console.log(typeof a);
+  </script>
+</body>
+</html>

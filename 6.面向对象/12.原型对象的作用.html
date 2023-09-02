@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Person{
+      name = '孙悟空';
+      age = 18;
+      sayHello(){
+        console.log('我是'+this.name);
+      }
+    }
+    const p = new Person();
+    const p2 = new Person();
+    // console.log(Object.getPrototypeOf(p) === Object.getPrototypeOf(p2));
+    // 所有同类型对象原型都是同一个,同类型对象的原型链都是一样的
+    /*
+      原型的作用:
+        原型就相当于公共的区域，可以被所有该类实例访问
+          可以将所有的公共属性方法存储到原型中，这样我们这样创建一个属性，就可以被所有实例访问
+
+        js中的继承就是原型继承:
+          当继承的时候，子类的原型对象就是父类的实例
+          
+    */
+    class Animal{
+      
+    }
+    class Cat extends Animal{
+
+    }
+    // cat原型 --> Animal.__proto__ -->obj.__proto__ -->Object原型 -->Object原型对象.__proto__ --> null
+    const cat = new Cat();
+    const animal = new Animal();
+    console.log(cat.__proto__);
+    console.log(cat.__proto__ == animal);
+    // const obj = new Object;
+    // console.log(Object.prototype.__proto__);
+    // console.log(cat.__proto__ instanceof Animal);
+  </script> 
+</body>
+</html>

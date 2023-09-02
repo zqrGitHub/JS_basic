@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 循环语句
+    /*
+      while循环
+        -语法:
+        while(条件表达式){
+          语句...
+        }
+
+      执行顺序：
+      1.先对条件表达式进行求值判断，如果值为true,则执行循环体，循环体执行完毕，继续对条件表达式进行判断
+      2.如果条件表达式为false终止循环
+
+
+      do..while循环
+        -语法:
+          do{
+            语句
+          }while(条件表达式)
+
+      执行流程：
+          上来就先执行循环体，执行完毕后再进行while后面的条件判断，结果为true继续执行循环体，false就退出循环
+
+
+      do...while至少可以保证循环体执行一次
+    */
+  //  break可以退出循环
+   var n = 1;
+    while(n<=2){
+      console.log(n);
+      n++
+    }
+    // 创建循环需要三个步骤
+    // 1.初始化一个变量
+    var i = 0;
+    // 2.在循环中设置一个条件表达式
+    while(i<10){
+      // 3.定义一个更新表达式，每次更新初始化变量
+      i++;
+    }
+
+    do{
+
+    }while(i<=10);
+  </script>
+</body>
+</html>

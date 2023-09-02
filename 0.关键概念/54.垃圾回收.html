@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 垃圾回收(GC)
+    // 程序运行过程中也会产生垃圾，积攒过多会导致速度变慢
+    // 所以需要一个垃圾回收机制  当一个对象没有任何变量或属性可以对它进行引用，无法操作该对象，这就产生了垃圾,这种对象过多就会占用大量内存空间，导致速度变慢，这种垃圾需要清理
+    // js中拥有自动的垃圾回收机制，会自动将垃圾对象从内存中销毁
+    var obj = new Object();
+
+    // 对对象进行各种操作....
+
+    // 这种方式就可以实现手动回收垃圾
+    obj = null;
+  </script>
+</body>
+</html>

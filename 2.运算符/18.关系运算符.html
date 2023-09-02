@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 通过关系运算符可以比较两个值的大小关系
+    //   成立返回true，不成立返回false
+    /*
+      >：
+        判断左侧是否大于右侧，成立true，否则false
+
+      >=:
+        判断左侧是否大于或等于右侧,同理
+      <:同理
+      <=:同理
+      
+      非数值的情况：
+        1.非数值比较的时候：会先转为数字再比较
+        2.任何值和NaN比较都是false
+        3.如果两次都是字符串，不会转为数字比较，而会比较Unicode编码,比较编码会一位一位比较
+          如果两位一样，比较下一位,可以借用这个特点对英文排序
+        
+          // 注意比较两个字符串型的数字时一定要转型: "15" > +"5"
+    */
+   console.log(5>10);
+   console.log( 5 > false);
+   console.log(NaN == NaN);
+   console.log("12"<"5");
+  </script>
+</body>
+</html>

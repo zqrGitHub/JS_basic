@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 箭头函数的返回值可以直接写在箭头后面
+    const fn = (a,b)=>a+b;
+    console.log(fn(1,2));
+    // 箭头函数如果要返回对象字面量需要加()识别
+    const fn2 = a =>({name:'abc'});
+    console.log(fn2());
+  </script>
+</body>
+</html>

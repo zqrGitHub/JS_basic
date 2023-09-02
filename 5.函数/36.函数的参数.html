@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 定义求和函数
+    // 可以在()中来指定一个或者多个形参(形式参数),形参之间用,隔开，声明形参就相当于在函数内部申明变量并且不赋值
+    // 调用函数时，在()中指定实际参数,调用时，不会检查实参类型,实参可以是任何数据类型
+    // 也不会检查实参数量，多余参数不会被赋值
+    // 如果实参少于形参，则没有对应形参将会是undefined
+    function sum(a,b){
+      console.log(a+b);
+    }
+    sum(5,8);
+    sum(12,'asd');
+    sum(23,12,true);
+    sum(1);
+  </script>
+</body>
+</html>

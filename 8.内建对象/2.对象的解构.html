@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const obj = {name:'孙悟空',gender:'男',age:18};
+    // let {name,gender,age} = obj;  //声明变量同时解构对象
+    // 如果是以下先声明，再赋值需要加()
+    let name,gender,age;
+    // 简化语法
+    ({name:name,gender:gender,age} = obj)
+    // console.log(name,gender,age); 
+    // 直接解构对象必须变量名和属性名一致，可以使用别名：使它不一致也可
+    let {name:a,gender:b,age:c,address:add='花果山'} = obj;
+    console.log(a,b,c,add);
+  </script>
+</body>
+</html>

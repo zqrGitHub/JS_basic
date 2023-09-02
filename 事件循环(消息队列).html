@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">点我以下</button>
+    <script>
+        /*
+        事件循环
+            -函数在每次执行时，都会产生一个执行环境(执行上下文)
+            -执行环境负责存储函数执行时产生的一切数据
+            -函数的执行环境存储在了一个叫做调用栈的地方
+        
+        调用栈：
+            -当一个函数被调用时，他的执行环境会作为一个栈帧，插入到调用栈的栈顶
+            -函数执行完毕其栈帧就会自动弹出
+
+        消息队列：
+            -消息队列负责存储将要执行的函数
+            -当我们触发一个事件，其响应函数并不是直接就添加到调用栈中
+                -因为调用栈中有可能会存在一些还没有执行完的代码
+            -事件触发后，JS引擎会将事件响应的函数插入到消息队列中排队
+          
+    */
+      function fn() {
+        function fn2(){
+
+        }
+        fn2()
+      }
+      fn();
+      const btn = document.getElementById("btn");
+      btn.onclick = function () {
+        console.log("按钮被点击");
+      };
+    </script>
+  </body>
+</html>

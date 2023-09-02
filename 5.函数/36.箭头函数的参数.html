@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 当箭头函数只有一个参数，可以省略括号
+    // const fn = a=>{
+    //   console.log(a);
+    // }
+    // fn(5);
+    // // 定义参数时，可以为参数指定默认值 es6
+    // const fn2 = (a=10,b=20,c=230)=>{
+    //   console.log(a,b,c);
+    // }
+    // fn2(1,2)
+
+    // 函数每次调用都会创建默认值
+    function fn3(a = {'name':'唐僧'}){
+      console.log(a);
+      a.name = '猪八戒';
+      console.log(a);
+    }
+    fn3();
+    fn3();
+
+    
+    var obj = {'name':'唐僧'}
+    // 这种情况修改的就是同一个对象
+    function fn4(a = obj){
+      console.log(a);
+      a.name = '猪八戒';
+      console.log(a);
+    }
+    fn4();
+    fn4();
+  </script>
+</body>
+</html>

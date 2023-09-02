@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      Map:
+        -用来存储键值对结构的数据(key-value)
+        -Object中存储的数据就可以认为是一种键值对结构
+        -Map和Object的主要区别：
+          -Object中的属性名只能是字符串或符号
+          -Map中任何类型的值都可以成为为数据的key
+    */
+   const obj = {};
+  //  创建一个map
+  /*
+      创建：
+        new Map()
+      属性和方法:
+        map.siez  获取键值对数量
+        map.set(key,value)  向map中添加键值对
+        map.get(key) 根据key获取值
+        map.delete(key) 删除指定数据
+        map.has(key) 检查map中是否包含指定的键
+        map.clear() 删除全部的键值对
+  */
+    const map = new Map();
+    map.set("name","孙悟空");
+    map.set(obj,"呵呵");
+    console.log(map);
+    map.delete(obj);
+    let res = map.get(obj)
+    console.log(res);
+    map.clear();
+    console.log(map);
+  </script>
+</body>
+</html>

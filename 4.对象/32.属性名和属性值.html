@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var obj = new Object();
+    obj.name = '孙悟空';
+    // 使用特殊的属性名，
+    // 设置语法：对象['属性名'] = 属性值
+    // 读取的时候也要这样  对象['属性名']
+    // 使用[]更灵活，在[]中直接传递一个变量，这个变量值是多少就会读取属性
+    obj['123'] = '周周';
+    var n = '123';
+    console.log(obj[n]); 
+    // js对象属性值可以是任意类型,可以是一个对象
+    var obj2 = new Object();
+    obj2.name = '猪八戒';
+    obj.test = obj2;
+    console.log(obj.test.name);
+
+    // 通过 in 运算符可检查一个对象中是否含有指定属性
+    // 语法：  “属性名” in 对象
+    console.log('pp' in obj);
+    console.log('name' in obj);
+  </script>
+</body>
+</html>

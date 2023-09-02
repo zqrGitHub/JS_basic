@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 3种逻辑运算符
+    //  !非  &&与  ||或
+
+    /*
+      !:
+        true变成false,false变true
+        小窍门:利用!将其他数据类型转为布尔值 !!,任意数据类型取两次反转为Boolean值
+
+      &&:
+        对符号两侧进行与运算并且返回结果;
+        除了两个值都是true返回true，其他都是false
+        -js的&&短路逻辑,左侧为false就不会看右侧
+
+      ||:两侧的值有一个true就是true，其他都是false
+      -js的||短路逻辑,左侧为true就不会看右侧
+
+    */
+  var a = "asf";
+  a = !!a;
+  console.log(a);
+
+  // 第一个值为true会检查第二个
+  // true && alert('出来！');
+  // 第一个值为false不会看第二个值
+  false && console.log(1);
+
+  </script>
+</body>
+</html>

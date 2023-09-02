@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function fn(){
+      alert('函数要执行了');
+
+      for(var i = 0;i<5;i++){
+        console.log(i);
+        if( i == 2){
+          // 退出当前循环
+          // break;
+          // 跳过当此循环
+          // continue
+          // 结束整个函数
+          return 
+        }
+        console.log(i);
+      }
+
+      alert('函数执行结束');
+    }
+    // fn();
+    // 返回值是任意类型,可以是对象也是函数
+    function fn2(){
+      return {name:'zz'}
+    }
+    var res = fn2();
+    console.log(res.name);
+
+    function fn3(){
+      function fn4(){
+        return 4;
+      }
+      return fn4;
+    }
+    console.log(fn3()());
+  </script>
+</body>
+</html>
